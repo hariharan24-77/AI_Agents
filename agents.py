@@ -5,7 +5,7 @@ from db import refresh_schema, schema_to_text
 
 load_dotenv()
 
-model = Groq(id="llama-3.3-70b-versatile")
+model = Groq(id="openai/gpt-oss-120b")
 
 _cached_schema = None
 _cached_schema_text = None
@@ -192,6 +192,7 @@ Check if SQL is safe.
 
 Unsafe:
 - DROP DATABASE
+- DROP TABLE 
 - mass DELETE without WHERE
 - dangerous TRUNCATE
 
